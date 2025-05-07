@@ -50,38 +50,36 @@ El lloc web està dissenyat per adaptar-se a diferents dispositius (mòbils, tau
 * **CSS Grid**: S'ha utilitzat per organitzar el contingut en columnes i files, assegurant que cada pàgina tingui un layout diferent.
 * **Media Queries**: S'han definit 3 punts de ruptura per adaptar el disseny a pantalles grans (escriptori), tauletes i mòbils. Per exemple: a les pantalles grans, el disseny es mostra en columnes amb un sidebar si escau; a les tauletes, les columnes s'ajusten i el menú es reorganitza; i als mòbils, el disseny es mostra en una sola columna amb un menú adaptat. A més, les galeries en columnes que passen a fileres, el menú està adaptat horitzontal en gran format, desplegable en mòbil (format hamburguesa). 
 
-Codi:
-
-![alt text](https://github.com/user-attachments/assets/e09a6d99-f826-4006-8f5d-7f3fe6390c8f)
-___  
-
 1. Contingut es vegi bé en mòbils *@media screen and (max-width: 767px)*
 * 1 columna:
- ![alt text](https://github.com/user-attachments/assets/e435c7ac-1725-452e-ae34-0e4a3216cc73)
+ ![image](https://github.com/user-attachments/assets/cc8badd6-b1e0-4a59-8cd1-2f80a577c3f0)
+
 ---
 
 2. Contingut es vegi bé en tauletes *@media screen and (min-width: 768px) and (max-width: 1023px)*
 * 2 columnes:
- ![image](https://github.com/user-attachments/assets/0802b26c-f3c3-4999-a6d5-8a12dea1cbbf)
+ ![image](https://github.com/user-attachments/assets/52dc3258-3cf2-4482-bb6c-cbbfd6c79c00)
+
 --- 
 
 3. Contingut es vegi bé en ordinadors *@media screen and (min-width: 1024px)*
 * 3 columnes:
- ![image](https://github.com/user-attachments/assets/0fda9700-b210-48bf-bb29-12f18574b866)
+![image](https://github.com/user-attachments/assets/bca50df5-e5e1-4236-ac58-de3e055657e0)
+
 ---
 
 Exemples codis Medi Queries:
 * Navegació: enllaços del menú es posen en vertical (column) i centrats per a mòbils. 
 
-![image](https://github.com/user-attachments/assets/6fa9be1a-cb66-4688-baaa-0400ba1d1afb)
 ___ 
 
 ## Cartografia
 La cartografia ha estat integrada mitjançant un mapa personalitzat on s’ha marcat en diverses tipologies de marcadors les protectores d’animals, els veterinaris i les zones de passeig. A les zones de passeig s’ha adjuntat una fototgrafia per tal de visualitzar millor el lloc, una descripció i s’ha puntuat el lloc per si es apte o no segons els següents items: el grau de conformitat, si hi ha fonts d’aigua, si hi ha ombra, la distància del centre del municipi. 
 * Icones del mapa:
-1. Ubicacions de les protectores d'animals: ![image](https://github.com/user-attachments/assets/2fbf53fd-08dc-455c-9792-fa0fe4958cb3)
-2. Ubicacions de les veterinaries: ![image](https://github.com/user-attachments/assets/1304e8e6-927f-41a5-a869-9335e24713d3)
-3. Zones de passeig: ![image](https://github.com/user-attachments/assets/cd8f80f6-e9f9-4d5f-8cdc-5827e5547ae4)
+1. Ubicacions de les protectores d'animals: ![Captura de pantalla 2025-05-07 141436](https://github.com/user-attachments/assets/a35f683f-8d2d-40ef-98f6-904fb51caff9)
+2. Ubicacions de les veterinaries: ![Captura de pantalla 2025-05-07 111740](https://github.com/user-attachments/assets/f4528b31-c4fa-4937-a8af-9b25eebe0e2a)
+3. Zones de passeig: ![Captura de pantalla 2025-05-07 141400](https://github.com/user-attachments/assets/09735fe0-5537-44f9-8586-2a2df614e2ab)
+
 
 
 
