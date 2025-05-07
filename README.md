@@ -49,6 +49,9 @@ A més, a totes les sis pàgines diferents de la web hi ha:
 El lloc web està dissenyat per adaptar-se a diferents dispositius (mòbils, tauletes i escriptoris) utilitzant CSS Grid i Media Queries. 
 * **CSS Grid**: S'ha utilitzat per organitzar el contingut en columnes i files, assegurant que cada pàgina tingui un layout diferent.
 * **Media Queries**: S'han definit 3 punts de ruptura per adaptar el disseny a pantalles grans (escriptori), tauletes i mòbils. Per exemple: a les pantalles grans, el disseny es mostra en columnes amb un sidebar si escau; a les tauletes, les columnes s'ajusten i el menú es reorganitza; i als mòbils, el disseny es mostra en una sola columna amb un menú adaptat. A més, les galeries en columnes que passen a fileres, el menú està adaptat horitzontal en gran format, desplegable en mòbil (format hamburguesa). 
+Codi:
+![Captura de pantalla 2025-05-06 231641](https://github.com/user-attachments/assets/d5d55ae9-a61d-4739-8d75-85374fc79073)
+
 
 1. Contingut es vegi bé en mòbils *@media screen and (max-width: 767px)*
 * 1 columna:
