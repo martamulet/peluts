@@ -111,7 +111,7 @@
 .cta-secondary{
     padding: 10px 10px;
     justify-self: center;
-    color: rgb(164, 26, 104);
+    color: rgb(26, 74, 164);
     text-decoration: none;
     border-radius: 30px;}
 
@@ -380,7 +380,7 @@ main, .about_container, .knowledge, .adoption-section {
 /* Estils per a la secció de voluntariat */
 .volunteer_container {
     padding: 40px 20px;
-    background-color: #e0edfe;
+    background-color: #ecf4ff;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
@@ -455,7 +455,7 @@ main, .about_container, .knowledge, .adoption-section {
 .volunteer_container .cta-volunteer {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #e0edfe;
+    background-color: #ecf4ff;
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
@@ -470,7 +470,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 /* Estilos para las cajas de información (Qui Som?, Objectius, Com Pots Ajutar?) */
 .project_item {
-    background-color: #e0edfe;
+    background-color: #ecf4ff;
     padding: 20px;
     border-radius: 10px;
     background-color: #1e1a6b; 
@@ -490,7 +490,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 /* Cambiar el color de las tarjetas de adopción */
 .animal-card1 {
-    background-color: #e0edfe; }
+    background-color: #ecf4ff; }
 
 /* Títol de secció */
 .w3-container h3 {
@@ -681,7 +681,7 @@ main, .about_container, .knowledge, .adoption-section {
     gap: 20px; }
 
 .multimedia-item {
-    background-color: #e0edfe;
+    background-color: #ecf4ff;
     border-radius: 10px;
     box-shadow: 0 4px 8px #e0edfe;
     overflow: hidden;
@@ -718,7 +718,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .container-mapa {
     text-align:center;
-    max-width: 100%;
+    width: 100%;
     padding: 20px;}
   
 /* Estil per al títol */
@@ -744,12 +744,11 @@ main, .about_container, .knowledge, .adoption-section {
     margin-right: auto;
     border-radius: 10px;
     overflow: hidden;
-    max-width: 100%;
     margin-bottom: 40px; }
   
 iframe {
     width: 100%;
-    height: 800px;
+    height: 1000px;
     border: 0;
     border-radius: 10px;}
 
