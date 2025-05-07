@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protectora d'Animals Cambrils</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="shortcut icon" href="../images/web-logo.png" type="image/x-icon">  
+</head>
+
+<body>
+    <!-- Barra de navegació amb W3.CSS personalitzada -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card nav-custom-bg">
+            <!-- Botó hamburguesa per mòbils amb SVG -->
+    <div class="w3-bar-item w3-button w3-hide-medium w3-hide-large nav-toggle" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      
+    
+          <!-- Logo i títol -->
+          <a href="../index.html" class="w3-bar-item w3-button nav-logo-link">
+            <img src="../images/web-logo.png" alt="Logo Protectora" style="height:50px; vertical-align:middle; margin-right:10px;">
+            <span class="nav_title">Protectora d'animals Cambrils</span>
+          </a>
+      
+          <!-- Enllaços de navegació -->
+          <div class="w3-right w3-hide-small" id="nav-links">
+            <a href="../index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+            <a href="info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+            <a href="multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+            <a href="map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+            <a href="members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+            <a href="contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+          </div>
+        </div>
+      
+        <!-- Menú per a mòbils -->
+    <div id="mobileMenu" class="w3-bar-block nav-custom-bg w3-hide w3-hide-large w3-hide-medium">
+        <a href="../index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+        <a href="info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+        <a href="multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+        <a href="map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+        <a href="members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+        <a href="contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+      </div>
+    </div>
+
+
+    <main class="contact-page-container">
+        <div class="contact-container">
+            <h2 class="contact-title">Contacta'ns</h2>
+            <p class="contact-text">Si tens alguna pregunta o vols ajudar-nos, omple el següent formulari i ens posarem en contacte amb tu com més aviat millor.</p>
+            
+            <form class="contact-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" placeholder="El teu nom" required>
+
+                <label for="email">Correu electrònic:</label>
+                <input type="email" id="email" name="email" placeholder="El teu correu" required>
+
+                <label for="message">Missatge:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escriu el teu missatge..." required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="contact-info">
+                <p><strong>📍 Adreça:</strong> Carrer dels Animals, 12, Cambrils</p>
+                <p><strong>📞 Telèfon:</strong> +34 678 901 234</p>
+                <p><strong>✉️ Correu:</strong> info@protectoracambrils.org</p>
+                <p><strong>🕒 Horari:</strong> Dilluns - Divendres: 9:00 - 18:00</p>
+            </div>
+
+            <div class="faq-section">
+                <h3>Preguntes Freqüents</h3>
+                <details>
+                    <summary>Quins són els horaris de visita?</summary>
+                    <p>Estem oberts de dilluns a divendres de 9:00 a 18:00.</p>
+                </details>
+                <details>
+                    <summary>Com puc adoptar un animal?</summary>
+                    <p>Pots visitar la nostra protectora o contactar-nos per correu electrònic per conèixer el procés d’adopció.</p>
+                </details>
+            </div>
+
+            <div class="testimonials">
+                <h3>Històries d'Adopció</h3>
+                <blockquote>
+                    "Adoptar en aquesta protectora ha estat la millor decisió de la meva vida! Gràcies per tot!"
+                    <br>— Maria, adoptant de Max 🐶
+                </blockquote>
+                <blockquote>
+                    "Quan vam conèixer la Lluna, sabíem que formaria part de la nostra família. Ara no ens imaginem la vida sense ella!"
+                    <br>— Joan i Carla, adoptants de Lluna 🐾
+                </blockquote>
+            </div>
+
+            <a href="https://wa.me/34600000000" class="whatsapp-button" target="_blank">
+                📩 Contacta'ns per WhatsApp
+            </a>  
+            
+        </div>
+    </main>
+ 
+    
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Protectora d'Animals Cambrils. Tots els drets reservats.</p>
+      <ul class="social-links">
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+      </ul>
+      
+    </div>
+  </footer>
+
+<!-- Botó de tornada al principi -->
+<button id="back-to-top-btn" title="Torna al principi">↑</button>
+
+
+<!-- JavaScript -->
+<script src="../js/scripts.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,1115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- BARRA DE NAVEGACIÓ ESTIL W3.CSS --- */
+.nav-custom-bg {
+    background-color: #001A49 !important;}
+  
+/* Enllaços de navegació */
+.nav-link {
+    color:  #a9c7ef !important;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: color 0.3s ease;}
+  
+.nav-link:hover, 
+.w3-bar-item:hover {
+    color: #f4a4c7 !important;}
+  
+/* Contenidor del logo i títol */
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    color:  #a9c7ef !important;
+    font-weight: bold;
+    text-decoration: none;}
+  
+/* Logo: més gran */
+.nav-logo-link img {
+    height: 80px !important; /* Augmenta el logo */
+    width: auto;}
+  
+.nav_title {
+    font-size: 20px;
+    white-space: nowrap;}
+  
+/* Icona del menú (SVG) com a botó hamburguesa */
+.nav-toggle {
+    cursor: pointer;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;}
+
+.nav-toggle svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;}
+
+
+/* Estils per al menú responsive */
+@media screen and (max-width: 768px) {
+.nav-link {
+    font-size: 16px;}
+
+.nav-custom-bg {
+    background-color: #001A49  !important;}
+
+.nav-toggle {
+    color: white !important; 
+    font-size: 30px;}
+
+#mobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #001A49;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 8px;}
+
+#mobileMenu a {
+    display: block;
+    border-top: 1px solid #ffffff22;
+    text-align: left;
+    padding-left: 20px;
+    padding: 10px;
+    color:  #a9c7ef;
+    font-size: 18px;
+    transition: color 0.3s ease;}
+
+#mobileMenu a:hover {
+    color: #001A49 !important;} }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;}
+
+.body {
+    padding-top: 120px; } 
+  
+            
+
+/* PÀGINA INICI 1 */
+.cta-primary{
+    padding: 10px 10px;
+    justify-self: center;
+    color: rgb(26, 74, 164);
+    text-decoration: none;
+    border-radius: 30px;}
+
+.cta-primary:hover {
+    background-color: #e6b80044;}
+
+/* Botó CTA */
+.cta-secondary{
+    padding: 10px 10px;
+    justify-self: center;
+    color: rgb(164, 26, 104);
+    text-decoration: none;
+    border-radius: 30px;}
+
+.cta-secondary:hover {
+    background-color: #e6b80044;}
+
+.img{
+    width: 100%;
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;}
+
+.form-container {
+    display: none;
+    margin-top: 30px;
+    background-color: rgb(229, 247, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: left;}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;}
+
+.form-container label {
+    font-weight: bold;}
+
+/* About */
+.about_container {
+    text-align: center;
+    padding: 40px; 
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    width: 100%; 
+    box-sizing: border-box;}
+
+.cards_container {
+    display: flex; 
+    gap: 20px; 
+    text-align: justify;
+    justify-content: space-between; 
+    flex-wrap: wrap;}
+
+.content_section {
+    flex: 1; 
+    margin-bottom: 20px; 
+    padding: 20px; 
+    background-color: #ee3caa22; 
+    border-radius: 12px;
+    box-shadow: 0 4px 6px #e07ebb59; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;}
+    
+.content_section:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 24px (#ee3caa5d); }
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 1rem;
+    margin-bottom: 25px;
+    margin-top: 40px;}
+
+.about_paragraph{
+    line-height: 1.7;
+    width: 80%;
+    max-width: 800px;
+    text-align: justify;}
+                        
+.about_main{
+    padding-top: 5px;
+    display: flex;
+    justify-content:center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px; 
+    flex-wrap:nowrap; 
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));}
+
+.about_icons{
+    background-color: #f7e5f0bc; 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 1px 1px 10px #dab2cbd0;
+    display:inline-block; 
+    max-width: 100%; 
+    min-height: auto; 
+    text-align:justify; 
+    width: 100%;}
+
+.about_icon{
+    width: 40px;}
+
+
+/* knowleadge */
+.knowledge{
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto; 
+    padding: 80px 0; 
+    margin-top: 30px; 
+    margin-bottom: 20px;}
+
+:root {
+    --padding-knwoledge-container-top: 10px;
+    --padding-knwoledge-container-bottom: 10px;
+    --padding-knwoledge-container-left: 30px;
+    --padding-knwoledge-container-right: 30px;}
+
+.subtitle-secondary {
+    font-size: 1.5rem;
+    margin-bottom: 10px; 
+    color: #1e1a6b; 
+    position: relative; 
+    z-index: 1;}
+
+.knowledge_container{
+    width:70%;
+    max-width: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+/* Corregimos la alineación */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--padding-knwoledge-container-top);
+    padding-bottom: var(--padding-knwoledge-container-bottom);
+    padding-left: var(--padding-knwoledge-container-left);
+    padding-right: var(--padding-knwoledge-container-right); 
+    gap: 20px;}
+
+.knowledge_paragraph:last-of-type {
+    margin-bottom: 10px; }
+
+.knowledge_paragraph{
+    line-height: 1.7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px; }
+
+.knowledge_img{
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;}
+
+.adoption-section {
+    text-align: center;
+    padding: 40px 20px; }
+
+.image-container {
+    width: 400px; 
+    height: 400px; 
+    margin: 0 auto; 
+    background-image: url('../images/imatge6.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    color: #ffffff; }
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px; }
+
+.subtitle-primary {
+    font-size: 1.5rem;
+    margin-bottom: 10px; 
+    color: #c6368f; 
+    position: relative; 
+    z-index: 1; }
+
+.clic-text {
+    position: relative; 
+    z-index: 1;}
+    
+.clic-text a {
+    font-size: 1rem;
+    color:  #c6368f; 
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s ease; }
+    
+.clic-text a:hover {
+    color: #ff9fdac8;}
+
+
+/* Espai superior per evitar que el contingut quedi tapat per la navbar */
+main, .about_container, .knowledge, .adoption-section {
+    margin-top: 100px; }
+  
+/* Transició suau per la navbar que desapareix i reapareix amb scroll */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s ease-in-out;}
+
+.image-container1 {
+    width: 100%;                    
+    max-width: 2000px;              
+    margin: 40px auto 20px auto;   
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;              
+    padding:auto; }
+
+.image-container1 img {
+    width: 100%;                   
+    height: auto;                  
+    display: block; }
+
+.img-below-nav {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; } 
+
+    
+
+/*PÀGINA INFORMACIÓ 2*/
+.info-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;}
+
+/* Selector más específico */
+.info-container .project_item {
+    background-color: #f7e5f0; }
+
+/* Estils per a la secció de voluntariat */
+.volunteer_container {
+    padding: 40px 20px;
+    background-color: #f9f5e3;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #d4a373;}
+
+.volunteer_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/petjades.png');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;}
+
+.volunteer_container h1 {
+    font-size: 2.5rem;
+    color: #5c3a21;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container h2 {
+    font-size: 1.8rem;
+    color: #5c3a21;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5c3a21;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container ol, .volunteer_container ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5c3a21;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container strong {
+    color: #8b5e3c;}
+
+.volunteer_container ul li::before {
+    content: "🐾";
+    margin-right: 10px;
+    color: #8b5e3c;}
+
+.volunteer_container ol li::before {
+    content: "🐾";
+    margin-right: 10px;
+    color: #8b5e3c;}
+
+.volunteer_container .cta-volunteer {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4a373;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;}
+
+.volunteer_container .cta-volunteer:hover {
+    background-color: #b08968;}
+
+/* Estilos para las cajas de información (Qui Som?, Objectius, Com Pots Ajutar?) */
+.project_item {
+    background-color: #f7e5f0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #db75b4; 
+    box-shadow: 0 4px 8px  #db75b479;}
+
+.project_item summary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ac4e88;
+    cursor: pointer;}
+
+.project_item p, .project_item ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #333;}
+
+/* Cambiar el color de las tarjetas de adopción */
+.animal-card1 {
+    background-color: #f7e5f0; }
+
+/* Títol de secció */
+.w3-container h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #001A49;
+    margin-top: 24px;}
+  
+/* Estils per les taules */
+.w3-table-all {
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;}
+  
+.w3-table-all th {
+    background-color: #f4a4c7;
+    color: white;
+    text-align: left;}
+  
+.w3-table-all td, .w3-table-all th {
+    padding: 12px 16px;
+    border: 1px solid #ddd;}
+  
+/* Efecte hover */
+.w3-table-all tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;}
+  
+/* Ombra i cantonades suaus */
+  .w3-card-4 {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+
+/* Secció de preguntes freqüents */
+.faq_section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;}
+
+.faq_section h2 {
+    font-size: 2rem;
+    color: #7171c1;
+    margin-bottom: 20px;}
+
+.faq_section details {
+    background-color: #7171c117;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #7171c158;
+    margin-bottom: 10px;}
+
+.faq_section summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;}
+
+.faq_section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 10px;}
+
+
+/* Secció d'adopció */
+.adoption-section1 {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;}
+
+.subtitle1 {
+    font-size: 2rem;
+    color: #ac4e88;
+    margin-bottom: 20px;}
+
+.animal-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-left: 20px;}
+
+.animal-card1 {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;}
+
+.animal-card1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card5:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card7:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+.animal-card8:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #c8bac25f;}
+
+.animal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;}
+
+.plus-icon {
+    font-size: 2rem;
+    color: #ee3caa;}
+
+.animal-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;}
+
+.animal-card1:hover .animal-info {
+    transform: translateY(0);}
+.animal-card2:hover .animal-info {
+    transform: translateY(0);}
+.animal-card3:hover .animal-info {
+    transform: translateY(0);}
+.animal-card4:hover .animal-info {
+    transform: translateY(0);}
+.animal-card5:hover .animal-info {
+    transform: translateY(0);}
+.animal-card6:hover .animal-info {
+    transform: translateY(0);}
+.animal-card7:hover .animal-info {
+    transform: translateY(0);}
+.animal-card8:hover .animal-info {
+    transform: translateY(0);}
+
+.animal-info h3 {
+    font-size: 1.5rem;
+    color: #b73685;
+    margin-bottom: 10px;}
+
+.animal-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;}
+
+
+
+/* PÀGINA MULTIMÈDIA 3 */
+.multimedia-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;}
+
+.multimedia-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #4a4a88;
+    margin-bottom: 40px;}
+
+.multimedia-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid adaptable */
+    gap: 20px; }
+
+.multimedia-item {
+    background-color: #cbcbe956;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #7171c163;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.multimedia-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px #7171c163;}
+
+.multimedia-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;}
+
+.multimedia-item iframe {
+    width: 100%;
+    height: 200px;
+    border: none;}
+
+.multimedia-item p {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;}
+
+/* Disseny responsive */
+@media (max-width: 768px) {
+.multimedia-container {
+    grid-template-columns: 1fr; /* Una columna en pantalles petites */} }
+
+
+
+/* PÀGINA MAPA 4 */
+
+.container-mapa {
+    text-align:center;
+    max-width: 100%;
+    padding: 20px;}
+  
+/* Estil per al títol */
+.subtitle-mapa {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;}
+
+/* Estil per al paràgraf */
+.about_paragraph-mapa {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;}
+  
+/* Mapa centrat i ajustat */
+#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 40px; }
+  
+iframe {
+    width: 100%;
+    height: 800px;
+    border: 0;
+    border-radius: 10px;}
+
+
+/* PÀGINA MEMBRES 5 */
+.team-container {
+    background-color: white;
+    padding: 40px 20px;}
+  
+/* Títol i paràgraf centrats */
+.subtitle-tertiary {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: inherit;}
+  
+.about_paragraph-tertiary {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-family: inherit;}
+  
+/* Targeta de cada membre */
+.member-card {
+    border: 2px solid #f4a4c7; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+    background-color: #fff;}
+  
+/* Efecte al passar el ratolí per damunt */
+.member-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);}
+  
+/* Imatges de membres */
+.member-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;}
+  
+/* Contingut dins de cada targeta */
+.member-card .w3-container {
+    padding: 16px;}
+  
+/* Nom del membre */
+.member-card h3 {
+    font-size: 1.3rem;
+    margin: 10px 0 8px;
+    font-weight: 600;}
+  
+/* Etiqueta del càrrec */
+.member-card .w3-tag {
+    display: inline-block;
+    background-color: #f4a4c7; 
+    color: #fff;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;}
+  
+/* Responsive padding */
+@media screen and (max-width: 768px) {
+.subtitle-tertiary {
+    font-size: 1.6rem;}
+  
+.about_paragraph-tertiary {
+    font-size: 1rem;}
+  
+.member-card img {
+    height: 200px;} }
+  
+
+/* Footer social icons */
+footer .w3-button.w3-circle {
+    margin: 0 4px;}
+
+footer .w3-button.w3-circle i {
+    color: white;}
+
+footer .w3-button.w3-circle:hover {
+    background-color: #87CEEB !important; }
+  
+
+
+/* PÀGINA CONTACTE 6*/
+.contact-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    padding: 20px;}
+
+.contact-container {
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    background:#bad5f27a;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;}
+
+.contact-title {
+    color: #001A49;
+    font-size: 1.8em;
+    margin-bottom: 10px;}
+
+.contact-text {
+    font-size: 1em;
+    color: #001A49;
+    margin-bottom: 20px;
+    justify-items: center;}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;}
+
+.contact-form label {
+    font-weight: bold;
+    color: #001A49;
+    text-align: left;}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1b145e;
+    border-radius: 5px;
+    font-size: 1em;}
+
+.contact-form button {
+    background: #001A49;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;}
+
+.contact-form button:hover {
+    background: #001A49;}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #001A49;
+    text-align: left;}
+
+.contact-info p {
+    margin: 5px 0;}
+
+.faq-section {
+    margin-top: 20px;
+    text-align: left;}
+        
+.faq-section details {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;}
+    
+.testimonials {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;}
+        
+.whatsapp-button:hover {
+    background: #1EBE5D;}
+        
+
+.footer {
+    background-color: #001A49;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;}
+            
+.footer-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;}
+            
+.footer p {
+    margin: 0;
+    Font-size: 0.9em;}
+            
+.social-links {
+    list-style: none;
+    Padding: 0;
+    display: flex;
+    gap: 15px;}
+            
+.social-links li {
+    display: inline;}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;}
+            
+.social-links a:hover {
+    color:rgb(135, 166, 222);}
+
+    
+/* Media Queries Generals */
+@media screen and (min-width: 1024px) {
+/* Estils per a escriptori */
+.nav_link {
+    display: flex;
+    justify-content: space-between;}
+
+.hero_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;}
+
+.knowledge_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;}
+
+/* Estils específics per a .volunteer_container a escriptori */
+.volunteer_container {
+    padding: 50px 30px;} }
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Estils per a tauleta */
+.nav_link {
+    flex-direction: column;
+    align-items: center;}
+
+.hero_container {
+    grid-template-columns: 1fr;}
+
+.cards_container {
+    grid-template-columns: repeat(2, 1fr);}
+
+.knowledge_container {
+    grid-template-columns: 1fr;}
+
+.image-container {
+    width: 300px;
+    height: 300px;}
+
+/* Estils específics per a .volunteer_container a tauleta */
+.volunteer_container {
+    padding: 40px 20px;} }
+
+
+@media screen and (max-width: 767px) {
+/* Estils per a mòbil */
+.nav_link {
+    flex-direction: column;
+    align-items: center;}
+
+.hero_container {
+    grid-template-columns: 1fr;}
+
+.cards_container {
+    grid-template-columns: 1fr;}
+
+.knowledge_container {
+    grid-template-columns: 1fr;}
+
+.image-container {
+    width: 200px;
+    height: 200px;}
+
+.nav_title {
+    font-size: 1.2rem;
+    text-align: center;}
+
+.hero_title {
+    font-size: 2rem;
+    text-align: center;}
+
+.hero_paragraph {
+    text-align: center;}
+
+.cta-primary, .cta-secondary {
+    width: 100%;
+    text-align: center;}
+
+/* Estils específics per a .volunteer_container a mòbil */
+.volunteer_container {
+    padding: 30px 15px;}
+
+.volunteer_container h1 {
+    font-size: 2rem;}
+
+.volunteer_container h2 {
+    font-size: 1.5rem;}
+
+.volunteer_container p {
+    font-size: 1rem;}
+
+.volunteer_container li {
+    font-size: 1rem;} }
+
+
+/* Mode clar per defecte */
+.pagina {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 20px;
+  }
+  
+  /* Botó dins de .pagina */
+  .pagina .mode-toggle {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Mode fosc */
+  .pagina.fosc {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  .pagina.fosc .mode-toggle {
+    background-color: #333;
+    color: #f1f1f1;
+  }
+  

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protectora d'Animals Cambrils</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="shortcut icon" href="../images/web-logo.png" type="image/x-icon">  
+  <link rel="stylesheet" href="qgis2web/css/leaflet.css">
+  <link rel="stylesheet" href="qgis2web/css/style.css">
+  <script src="qgis2web/js/leaflet.js"></script>
+  <script src="qgis2web/js/qgis2web_expressions.js"></script>
+</head>
+
+<body>
+    <!-- Barra de navegació amb W3.CSS personalitzada -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card nav-custom-bg">
+            <!-- Botó hamburguesa per mòbils amb SVG -->
+    <div class="w3-bar-item w3-button w3-hide-medium w3-hide-large nav-toggle" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      
+    
+          <!-- Logo i títol -->
+          <a href="../index.html" class="w3-bar-item w3-button nav-logo-link">
+            <img src="../images/web-logo.png" alt="Logo Protectora" style="height:50px; vertical-align:middle; margin-right:10px;">
+            <span class="nav_title">Protectora d'animals Cambrils</span>
+          </a>
+      
+          <!-- Enllaços de navegació -->
+          <div class="w3-right w3-hide-small" id="nav-links">
+            <a href="../index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+            <a href="info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+            <a href="multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+            <a href="map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+            <a href="members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+            <a href="contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+          </div>
+        </div>
+      
+        <!-- Menú per a mòbils -->
+    <div id="mobileMenu" class="w3-bar-block nav-custom-bg w3-hide w3-hide-large w3-hide-medium">
+        <a href="../index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+        <a href="info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+        <a href="multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+        <a href="map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+        <a href="members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+        <a href="contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+      </div>
+    </div>
+    
+
+    <main class="container-mapa">
+        <h1 class="subtitle-mapa">On Som?</h1>
+        <p class="about_paragraph-mapa">
+            La nostra protectora es troba a Cambrils. Vine a visitar-nos per conèixer els animals i ajudar-los a trobar una nova llar!
+        </p>
+
+        <div id="map" style="max-width: 40%; border-radius: 10px;"></div>
+        <iframe src="../maps/peluts/index.html" width="100%" height="600px" style="border:none;"></iframe>
+        
+      </main>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Protectora d'Animals Cambrils. Tots els drets reservats.</p>
+      <ul class="social-links">
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+<!-- Botó de tornada al principi -->
+<button id="back-to-top-btn" title="Torna al principi">↑</button>
+
+<!-- JavaScript -->
+<script src="../js/scripts.js"></script> 
+<script src="qgis2web/js/map.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protectora d'Animals Cambrils</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="shortcut icon" href="../images/web-logo.png" type="image/x-icon">  
+</head>
+
+<body>
+<!-- Barra de navegació amb W3.CSS personalitzada -->
+<div class="w3-top">
+    <div class="w3-bar w3-card nav-custom-bg">
+        <!-- Botó hamburguesa per mòbils amb SVG -->
+<div class="w3-bar-item w3-button w3-hide-medium w3-hide-large nav-toggle" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  
+
+      <!-- Logo i títol -->
+      <a href="./index.html" class="w3-bar-item w3-button nav-logo-link">
+        <img src="../images/web-logo.png" alt="Logo Protectora" style="height:50px; vertical-align:middle; margin-right:10px;">
+        <span class="nav_title">Protectora d'animals Cambrils</span>
+      </a>
+  
+      <!-- Enllaços de navegació -->
+      <div class="w3-right w3-hide-small" id="nav-links">
+        <a href="./index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+        <a href="pages/info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+        <a href="pages/multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+        <a href="pages/map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+        <a href="pages/members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+        <a href="pages/contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+      </div>
+    </div>
+  
+    <!-- Menú per a mòbils -->
+    <div id="mobileMenu" class="w3-bar-block nav-custom-bg w3-hide w3-hide-large w3-hide-medium">
+        <a href="./index.html" class="w3-bar-item w3-button nav-link">Inici</a>
+        <a href="pages/info.html" class="w3-bar-item w3-button nav-link">Informació</a>
+        <a href="pages/multimedia.html" class="w3-bar-item w3-button nav-link">Multimedia</a>
+        <a href="pages/map.html" class="w3-bar-item w3-button nav-link">Mapa</a>
+        <a href="pages/members.html" class="w3-bar-item w3-button nav-link">Membres</a>
+        <a href="pages/contact.html" class="w3-bar-item w3-button nav-link">Contacte</a>
+      </div>
+    </div>
+
+<!-- Imatge sota la barra de navegació -->
+<div class="image-container1">
+    <img src="./images/imatge_1.jpg" alt="Imatge 1" class="imatge_1">
+  </div>
+  
+    <div id="adoptionForm" class="form-container" style="display: none;">
+        <h2>Formulari d'Adopció</h2>
+        <form>
+            <label for="animalType">Quin tipus d'animal?</label>
+            <select id="animalType" name="animalType" required>
+                <option value="dog">Gos</option>
+                <option value="cat">Gat</option>
+            </select>
+
+        <label for="age">Edat de l'animal:</label>
+        <select id="age" name="age" required>
+            <option value="puppy">Cadell</option>
+            <option value="young">Jove</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Vell</option>
+        </select>
+
+            <label for="name">Nom i cognoms usuari:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Número de contacte usuari:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    
+    
+    
+    <main>
+        <div class="about_container">
+            <h1>Descobreix com pots fer la diferència a la vida d’un animal.</h1>
+            <p>Adopta, col·labora o fes-te voluntari avui mateix!</p>
+        
+        <div class="cards_container"> <!-- Nuevo contenedor para las tarjetas -->
+            <div class="content_section">
+                <h2>Voluntariat</h2>
+                <ul>
+                    <li>Passeig de gossos</li>
+                    <li>Atenció veterinària bàsica</li>
+                    <li>Tasques administratives i comunicació</li>
+                </ul>
+                <a href="pages/contact.html" class="cta-secondary" id="toggleForm" target="_blank">Més informació</a>
+            </div>
+        
+            <div class="content_section">
+                <h2>Donacions</h2>
+                <ul>
+                    <li>Apadrina un animal</li>
+                    <li>Dona material (menjar, mantes, joguines)</li>
+                    <li>Ofereix una llar d’acollida</li>
+                </ul>
+                <a href="pages/contact.html" class="cta-secondary" id="toggleForm" target="_blank">Fes una donació</a>
+            </div>
+        
+            <div class="content_section">
+                <h2>Difusió i Sensibilització</h2>
+                                            
+                <ul>
+                    <li>Comparteix les nostres publicacions a xarxes socials</li>
+                    <li>Participa en campanyes de conscienciació</li>
+                    <li>Organitza esdeveniments solidaris per recaptar fons</li>
+                </ul>
+                <a href="pages/info.html" class="cta-secondary" id="toggleForm" target="_blank">Ajuda'ns a difondre</a>
+            </div>
+        </div> 
+        </div>
+       
+    
+      
+<!-- Sección de adopción -->
+<section class="adoption-section">
+    <div class="image-container"></div>
+    <h2 class="subtitle-primary">Descobreix els animals que esperen un llar.</h2>
+    <p class="clic-text">
+        <a href="pages/info.html" class="cta-secondary" id="toggleForm" target="_blank" >Clica aquí</a>
+        </p>
+</section>
+
+
+
+        <section class="knowledge">
+            <div class="Knowledge_container container">
+                <div class="knowledge_texts">
+                    <h2 class="subtitle-secondary">Protectora d'animals. Et necesitem!</h2>
+                    <p class="knowledge_paragraph">Tota ajuda es necesaria!</p>
+                    <a href="pages/contact.html"class="cta-primary" id="toggleForm" target="_blank">Vine a ajudar-nos!</a>
+                </div>
+
+                <figure class="knowledge_img">
+                    <img src="./images/im_2.jpg" class="knowledge_img">
+                </figure>
+            </div>
+        
+            <div class="pagina">
+                <button id="darkModeToggle">Canvia mode</button> </div>
+        </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Protectora d'Animals Cambrils. Tots els drets reservats.</p>
+      <ul class="social-links">
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+      </ul>
+    </div>
+</footer>
+
+<script src="js/scripts.js"></script>
+
+<!-- Botó de tornada al principi -->
+<button id="back-to-top-btn" title="Torna al principi">↑</button>
+
+<!-- JavaScript -->
+<script src="../pag_web/js/scripts.js"></script> 
+
+</body>
+</html>
