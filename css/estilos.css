@@ -15,7 +15,7 @@
   
 .nav-link:hover, 
 .w3-bar-item:hover {
-    color: #f4a4c7 !important;}
+    color: #a9c7ef !important;}
   
 /* Contenidor del logo i títol */
 .nav-logo-link {
@@ -163,15 +163,15 @@
     flex: 1; 
     margin-bottom: 20px; 
     padding: 20px; 
-    background-color: #ee3caa22; 
+    background-color: #e0edfe; 
     border-radius: 12px;
-    box-shadow: 0 4px 6px #e07ebb59; 
+    box-shadow: 0 4px 6px #a9c7ef; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     cursor: pointer;}
     
 .content_section:hover {
     transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 12px 24px (#ee3caa5d); }
+    box-shadow: 0 12px 24px (#a9c7ef); }
 
 .subtitle{
     color: var(--color-title);
@@ -197,10 +197,10 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));}
 
 .about_icons{
-    background-color: #f7e5f0bc; 
+    background-color: #dae7f8; 
     padding: 15px; 
     border-radius: 10px; 
-    box-shadow: 1px 1px 10px #dab2cbd0;
+    box-shadow: 1px 1px 10px #a9c7ef;
     display:inline-block; 
     max-width: 100%; 
     min-height: auto; 
@@ -312,7 +312,7 @@
 .subtitle-primary {
     font-size: 1.5rem;
     margin-bottom: 10px; 
-    color: #c6368f; 
+    color: #1e1a6b; 
     position: relative; 
     z-index: 1; }
 
@@ -322,12 +322,12 @@
     
 .clic-text a {
     font-size: 1rem;
-    color:  #c6368f; 
+    color:  #1e1a6b; 
     text-decoration: none; /* Quita el subrayado del enlace */
     transition: color 0.3s ease; }
     
 .clic-text a:hover {
-    color: #ff9fdac8;}
+    color: #a9c7ef;}
 
 
 /* Espai superior per evitar que el contingut quedi tapat per la navbar */
@@ -375,19 +375,19 @@ main, .about_container, .knowledge, .adoption-section {
 
 /* Selector más específico */
 .info-container .project_item {
-    background-color: #f7e5f0; }
+    background-color: #e0edfe; }
 
 /* Estils per a la secció de voluntariat */
 .volunteer_container {
     padding: 40px 20px;
-    background-color: #f9f5e3;
+    background-color: #e0edfe;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 800px;
     position: relative;
     overflow: hidden;
-    border: 2px solid #d4a373;}
+    border: 2px solid #1e1a6b;}
 
 .volunteer_container::before {
     content: "";
@@ -403,7 +403,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .volunteer_container h1 {
     font-size: 2.5rem;
-    color: #5c3a21;
+    color: #1e1a6b;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
@@ -411,7 +411,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .volunteer_container h2 {
     font-size: 1.8rem;
-    color: #5c3a21;
+    color: #1e1a6b;
     margin-top: 30px;
     margin-bottom: 15px;
     position: relative;
@@ -420,7 +420,7 @@ main, .about_container, .knowledge, .adoption-section {
 .volunteer_container p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #5c3a21;
+    color: #1e1a6b;
     margin-bottom: 20px;
     position: relative;
     z-index: 2;}
@@ -434,28 +434,28 @@ main, .about_container, .knowledge, .adoption-section {
 .volunteer_container li {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #5c3a21;
+    color: #1e1a6b;
     margin-bottom: 10px;
     position: relative;
     z-index: 2;}
 
 .volunteer_container strong {
-    color: #8b5e3c;}
+    color: #1e1a6b;}
 
 .volunteer_container ul li::before {
     content: "🐾";
     margin-right: 10px;
-    color: #8b5e3c;}
+    color: #1e1a6b;}
 
 .volunteer_container ol li::before {
     content: "🐾";
     margin-right: 10px;
-    color: #8b5e3c;}
+    color: #1e1a6b;}
 
 .volunteer_container .cta-volunteer {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #d4a373;
+    background-color: #e0edfe;
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
@@ -466,20 +466,20 @@ main, .about_container, .knowledge, .adoption-section {
     z-index: 2;}
 
 .volunteer_container .cta-volunteer:hover {
-    background-color: #b08968;}
+    background-color: #1e1a6b;}
 
 /* Estilos para las cajas de información (Qui Som?, Objectius, Com Pots Ajutar?) */
 .project_item {
-    background-color: #f7e5f0;
+    background-color: #e0edfe;
     padding: 20px;
     border-radius: 10px;
-    background-color: #db75b4; 
-    box-shadow: 0 4px 8px  #db75b479;}
+    background-color: #1e1a6b; 
+    box-shadow: 0 4px 8px  #a9c7ef;}
 
 .project_item summary {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ac4e88;
+    color: #1e1a6b;
     cursor: pointer;}
 
 .project_item p, .project_item ul {
@@ -490,7 +490,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 /* Cambiar el color de las tarjetas de adopción */
 .animal-card1 {
-    background-color: #f7e5f0; }
+    background-color: #e0edfe; }
 
 /* Títol de secció */
 .w3-container h3 {
@@ -506,7 +506,7 @@ main, .about_container, .knowledge, .adoption-section {
     font-size: 16px;}
   
 .w3-table-all th {
-    background-color: #f4a4c7;
+    background-color: #a9c7ef;
     color: white;
     text-align: left;}
   
@@ -562,7 +562,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .subtitle1 {
     font-size: 2rem;
-    color: #ac4e88;
+    color: #1e1a6b;
     margin-bottom: 20px;}
 
 .animal-container1 {
@@ -622,7 +622,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .plus-icon {
     font-size: 2rem;
-    color: #ee3caa;}
+    color: #6b67bf;}
 
 .animal-info {
     position: absolute;
@@ -653,7 +653,7 @@ main, .about_container, .knowledge, .adoption-section {
 
 .animal-info h3 {
     font-size: 1.5rem;
-    color: #b73685;
+    color: #1e1a6b;
     margin-bottom: 10px;}
 
 .animal-info p {
@@ -681,15 +681,15 @@ main, .about_container, .knowledge, .adoption-section {
     gap: 20px; }
 
 .multimedia-item {
-    background-color: #cbcbe956;
+    background-color: #e0edfe;
     border-radius: 10px;
-    box-shadow: 0 4px 8px #7171c163;
+    box-shadow: 0 4px 8px #e0edfe;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 .multimedia-item:hover {
     transform: scale(1.05); 
-    box-shadow: 0 8px 16px #7171c163;}
+    box-shadow: 0 8px 16px #e0edfe;}
 
 .multimedia-item img {
     width: 100%;
@@ -775,7 +775,7 @@ iframe {
   
 /* Targeta de cada membre */
 .member-card {
-    border: 2px solid #f4a4c7; 
+    border: 2px solid #7171c1; 
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -785,7 +785,7 @@ iframe {
 /* Efecte al passar el ratolí per damunt */
 .member-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);}
+    box-shadow: 0 6px 15px #e0edfe;}
   
 /* Imatges de membres */
 .member-card img {
@@ -807,7 +807,7 @@ iframe {
 /* Etiqueta del càrrec */
 .member-card .w3-tag {
     display: inline-block;
-    background-color: #f4a4c7; 
+    background-color: #a9c7ef; 
     color: #fff;
     padding: 6px 12px;
     margin-bottom: 12px;
