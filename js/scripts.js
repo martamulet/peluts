@@ -10,7 +10,7 @@ backToTopButton.addEventListener("click", () => {
 });
 
 
-const toggle = document.getElementById('.nav-toggle');
+const toggle = document.getElementById('nav-toggle');
 const menu = document.getElementById('nav-menu');
 
 toggle.addEventListener('click', () => {
