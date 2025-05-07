@@ -57,7 +57,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-
+/*
 const pagina = document.querySelector(".pagina");
 const toggleButton = document.getElementById("darkModeToggle");
 
@@ -66,3 +66,4 @@ toggleButton.classList.add("mode-toggle");
 toggleButton.addEventListener("click", () => {
   pagina.classList.toggle("fosc");
 });
+*/
