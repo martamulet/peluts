@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobileMenu');
 
   toggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('w3-hide');
-    mobileMenu.classList.toggle('nav_link--show');
+    mobileMenu.classList.toggle('w3-show');
   });
 
 });

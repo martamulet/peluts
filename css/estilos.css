@@ -22,7 +22,7 @@
 
 /* --- BARRA DE NAVEGACIÓ ESTIL W3.CSS --- */
 .nav-custom-bg {
-    background-color: #001A49 !important;}
+    background-color:  #001A49  !important;}
   
 /* Enllaços de navegació */
 .nav-link {
@@ -61,15 +61,23 @@
     cursor: pointer;
     padding: 10px 16px;
     display: flex;
-    align-items: center;}
+    align-items: center;
+    color: white !important;}
 
 .nav-toggle svg {
     width: 30px;
     height: 30px;
     fill: none;
-    stroke: white;
+    stroke: white  !important;
     stroke-width: 2;
     stroke-linecap: round;}
+
+
+/* Estils per a l'icona hamburguesa utilitzant el símbol ☰ */
+.hamburger-icon {
+    font-size: 30px; /* Mida de la icona */
+    color: white; /* Canvia el color del símbol a blanc */
+}
 
 
 /* Estils per al menú responsive */
@@ -78,7 +86,7 @@
     font-size: 16px;}
 
 .nav-custom-bg {
-    background-color: #001A49  !important;}
+    background-color:  #001A49   !important;}
 
 .nav-toggle {
     color: white !important; 
@@ -88,14 +96,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #001A49;
+    background-color:  #001A49 ;
     margin-top: 50px;
     padding: 10px;
     border-radius: 8px;}
 
 #mobileMenu a {
     display: block;
-    border-top: 1px solid #ffffff22;
+    border-top: 1px solid #ffffff22  !important;
     text-align: left;
     padding-left: 20px;
     padding: 10px;
@@ -104,7 +112,7 @@
     transition: color 0.3s ease;}
 
 #mobileMenu a:hover {
-    color: #001A49 !important;} }
+    color: #ffffff !important;} }
 
 .navbar {
     position: sticky;
@@ -376,7 +384,7 @@ main, .about_container, .knowledge, .adoption-section {
 .image-container1 img {
     width: 100%;                   
     height: auto;                  
-    display: block; }
+    display: block;}
 
 .img-below-nav {
     max-width: 100%; 
