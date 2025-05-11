@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        #map {
+            width: 1131px;
+            height: 588px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/L.Control.Layers.Tree.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet.wms.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/municipis_3.js"></script>
+        <script src="data/cambrils_15000_4.js"></script>
+        <script src="data/veterinaries__5.js"></script>
+        <script src="data/protectores_animals__6.js"></script>
+        <script src="data/zones_passeig__7.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:false, maxZoom:28, minZoom:1
+        }).fitBounds([[41.04359195677081,0.9866116815812175],[41.116429682151555,1.1665423739876009]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        // remove popup's row if "visible-with-data"
+        function removeEmptyRowsFromPopupContent(content, feature) {
+         var tempDiv = document.createElement('div');
+         tempDiv.innerHTML = content;
+         var rows = tempDiv.querySelectorAll('tr');
+         for (var i = 0; i < rows.length; i++) {
+             var td = rows[i].querySelector('td.visible-with-data');
+             var key = td ? td.id : '';
+             if (td && td.classList.contains('visible-with-data') && feature.properties[key] == null) {
+                 rows[i].parentNode.removeChild(rows[i]);
+             }
+         }
+         return tempDiv.innerHTML;
+        }
+        // add class to format popup if it contains media
+		function addClassToPopupIfMedia(content, popup) {
+			var tempDiv = document.createElement('div');
+			tempDiv.innerHTML = content;
+			if (tempDiv.querySelector('td img')) {
+				popup._contentNode.classList.add('media');
+					// Delay to force the redraw
+					setTimeout(function() {
+						popup.update();
+					}, 10);
+			} else {
+				popup._contentNode.classList.remove('media');
+			}
+		}
+        var zoomControl = L.control.zoom({
+            position: 'topleft'
+        }).addTo(map);
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0].innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0].className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_Ortofotogrisvigent_0');
+        map.getPane('pane_Ortofotogrisvigent_0').style.zIndex = 400;
+        var layer_Ortofotogrisvigent_0 = L.WMS.layer("http://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms", "ortofoto_gris_vigent", {
+            pane: 'pane_Ortofotogrisvigent_0',
+            format: 'image/png',
+            uppercase: true,
+            transparent: true,
+            continuousWorld : true,
+            tiled: true,
+            info_format: 'text/html',
+            opacity: 1,
+            identify: false,
+            attribution: '',
+        });
+        map.addLayer(layer_Ortofotogrisvigent_0);
+        map.createPane('pane_GoogleSatelliteHybrid_1');
+        map.getPane('pane_GoogleSatelliteHybrid_1').style.zIndex = 401;
+        var layer_GoogleSatelliteHybrid_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatelliteHybrid_1',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_GoogleSatelliteHybrid_1;
+        map.addLayer(layer_GoogleSatelliteHybrid_1);
+        map.createPane('pane_Ortofotocolorvigent_2');
+        map.getPane('pane_Ortofotocolorvigent_2').style.zIndex = 402;
+        var layer_Ortofotocolorvigent_2 = L.WMS.layer("http://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms", "ortofoto_color_vigent", {
+            pane: 'pane_Ortofotocolorvigent_2',
+            format: 'image/png',
+            uppercase: true,
+            transparent: true,
+            continuousWorld : true,
+            tiled: true,
+            info_format: 'text/html',
+            opacity: 1,
+            identify: false,
+            attribution: '',
+        });
+        map.addLayer(layer_Ortofotocolorvigent_2);
+        function pop_municipis_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CODIMUNI'] !== null ? autolinker.link(String(feature.properties['CODIMUNI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMMUNI</th>\
+                        <td class="visible-with-data" id="NOMMUNI">' + (feature.properties['NOMMUNI'] !== null ? autolinker.link(String(feature.properties['NOMMUNI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CAPMUNI'] !== null ? autolinker.link(String(feature.properties['CAPMUNI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['AREAM5000'] !== null ? autolinker.link(String(feature.properties['AREAM5000']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CODICOMAR'] !== null ? autolinker.link(String(feature.properties['CODICOMAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NOMCOMAR'] !== null ? autolinker.link(String(feature.properties['NOMCOMAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CAPCOMAR'] !== null ? autolinker.link(String(feature.properties['CAPCOMAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CODIVEGUE'] !== null ? autolinker.link(String(feature.properties['CODIVEGUE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NOMVEGUE'] !== null ? autolinker.link(String(feature.properties['NOMVEGUE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CAPVEGUE'] !== null ? autolinker.link(String(feature.properties['CAPVEGUE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CODIPROV'] !== null ? autolinker.link(String(feature.properties['CODIPROV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NOMPROV'] !== null ? autolinker.link(String(feature.properties['NOMPROV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CAPPROV'] !== null ? autolinker.link(String(feature.properties['CAPPROV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_municipis_3_0() {
+            return {
+                pane: 'pane_municipis_3',
+                opacity: 1,
+                color: 'rgba(185,170,53,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_municipis_3');
+        map.getPane('pane_municipis_3').style.zIndex = 403;
+        map.getPane('pane_municipis_3').style['mix-blend-mode'] = 'normal';
+        var layer_municipis_3 = new L.geoJson(json_municipis_3, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_municipis_3',
+            layerName: 'layer_municipis_3',
+            pane: 'pane_municipis_3',
+            onEachFeature: pop_municipis_3,
+            style: style_municipis_3_0,
+        });
+        bounds_group.addLayer(layer_municipis_3);
+        map.addLayer(layer_municipis_3);
+        function pop_cambrils_15000_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NOMMUNI</th>\
+                        <td class="visible-with-data" id="NOMMUNI">' + (feature.properties['NOMMUNI'] !== null ? autolinker.link(String(feature.properties['NOMMUNI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_cambrils_15000_4_0() {
+            return {
+                pane: 'pane_cambrils_15000_4',
+                opacity: 1,
+                color: 'rgba(208,120,94,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_cambrils_15000_4');
+        map.getPane('pane_cambrils_15000_4').style.zIndex = 404;
+        map.getPane('pane_cambrils_15000_4').style['mix-blend-mode'] = 'normal';
+        var layer_cambrils_15000_4 = new L.geoJson(json_cambrils_15000_4, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_cambrils_15000_4',
+            layerName: 'layer_cambrils_15000_4',
+            pane: 'pane_cambrils_15000_4',
+            onEachFeature: pop_cambrils_15000_4,
+            style: style_cambrils_15000_4_0,
+        });
+        bounds_group.addLayer(layer_cambrils_15000_4);
+        map.addLayer(layer_cambrils_15000_4);
+        function pop_veterinaries__5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom'] !== null ? autolinker.link(String(feature.properties['nom']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ubicació'] !== null ? autolinker.link(String(feature.properties['ubicació']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_veterinaries__5_0() {
+            return {
+                pane: 'pane_veterinaries__5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/veterinaries__5.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_veterinaries__5');
+        map.getPane('pane_veterinaries__5').style.zIndex = 405;
+        map.getPane('pane_veterinaries__5').style['mix-blend-mode'] = 'normal';
+        var layer_veterinaries__5 = new L.geoJson(json_veterinaries__5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_veterinaries__5',
+            layerName: 'layer_veterinaries__5',
+            pane: 'pane_veterinaries__5',
+            onEachFeature: pop_veterinaries__5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_veterinaries__5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_veterinaries__5);
+        map.addLayer(layer_veterinaries__5);
+        function pop_protectores_animals__6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom'] !== null ? autolinker.link(String(feature.properties['nom']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ubicació'] !== null ? autolinker.link(String(feature.properties['ubicació']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_protectores_animals__6_0() {
+            return {
+                pane: 'pane_protectores_animals__6',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/protectores_animals__6.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_protectores_animals__6');
+        map.getPane('pane_protectores_animals__6').style.zIndex = 406;
+        map.getPane('pane_protectores_animals__6').style['mix-blend-mode'] = 'normal';
+        var layer_protectores_animals__6 = new L.geoJson(json_protectores_animals__6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_protectores_animals__6',
+            layerName: 'layer_protectores_animals__6',
+            pane: 'pane_protectores_animals__6',
+            onEachFeature: pop_protectores_animals__6,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_protectores_animals__6_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_protectores_animals__6);
+        map.addLayer(layer_protectores_animals__6);
+        function pop_zones_passeig__7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ubicacions'] !== null ? autolinker.link(String(feature.properties['ubicacions']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fotografia'] !== null ? '<img src="images/' + String(feature.properties['fotografia']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['n_satisf'] !== null ? autolinker.link(String(feature.properties['n_satisf']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['info'] !== null ? autolinker.link(String(feature.properties['info']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_zones_passeig__7_0() {
+            return {
+                pane: 'pane_zones_passeig__7',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/zones_passeig__7.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_zones_passeig__7');
+        map.getPane('pane_zones_passeig__7').style.zIndex = 407;
+        map.getPane('pane_zones_passeig__7').style['mix-blend-mode'] = 'normal';
+        var layer_zones_passeig__7 = new L.geoJson(json_zones_passeig__7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_zones_passeig__7',
+            layerName: 'layer_zones_passeig__7',
+            pane: 'pane_zones_passeig__7',
+            onEachFeature: pop_zones_passeig__7,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_zones_passeig__7_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_zones_passeig__7);
+        map.addLayer(layer_zones_passeig__7);
+        var overlaysTree = [
+            {label: '<img src="legend/zones_passeig__7.png" /> zones_passeig_', layer: layer_zones_passeig__7},
+            {label: '<img src="legend/protectores_animals__6.png" /> protectores_animals_', layer: layer_protectores_animals__6},
+            {label: '<img src="legend/veterinaries__5.png" /> veterinaries_', layer: layer_veterinaries__5},
+            {label: '<img src="legend/cambrils_15000_4.png" /> cambrils_15000', layer: layer_cambrils_15000_4},
+            {label: '<img src="legend/municipis_3.png" /> municipis', layer: layer_municipis_3},
+        {label: '<b>mapes de fons</b>',  selectAllCheckbox: true, children: [
+            {label: "Ortofoto color vigent", layer: layer_Ortofotocolorvigent_2},
+            {label: "Google Satellite Hybrid", layer: layer_GoogleSatelliteHybrid_1},
+            {label: "Ortofoto gris vigent", layer: layer_Ortofotogrisvigent_0},]},]
+        var lay = L.control.layers.tree(null, overlaysTree,{
+            //namedToggle: true,
+            //selectorBack: false,
+            //closedSymbol: '&#8862; &#x1f5c0;',
+            //openedSymbol: '&#8863; &#x1f5c1;',
+            //collapseAll: 'Collapse all',
+            //expandAll: 'Expand all',
+            collapsed: true,
+        });
+        lay.addTo(map);
+        setBounds();
+        var i = 0;
+        layer_municipis_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['NOMMUNI'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['NOMMUNI']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_municipis_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_cambrils_15000_4.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['NOMMUNI'] !== null?String('<div style="color: #ffffff; font-size: 10pt; font-weight: bold; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['NOMMUNI']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_cambrils_15000_4'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_municipis_3,layer_cambrils_15000_4,layer_zones_passeig__7]);
+        map.on("zoomend", function(){
+            resetLabels([layer_municipis_3,layer_cambrils_15000_4,layer_zones_passeig__7]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_municipis_3,layer_cambrils_15000_4,layer_zones_passeig__7]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_municipis_3,layer_cambrils_15000_4,layer_zones_passeig__7]);
+        });
+        </script>
+    </body>
+</html>
